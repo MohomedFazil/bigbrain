@@ -13,6 +13,8 @@ const Grade = () => {
         const res = await loadGrades();
         if (res) {
           setGrade(res);
+        } else {
+          console.log("No grades found");
         }
       } catch (error) {
         console.log(error);
