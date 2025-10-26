@@ -9,12 +9,7 @@ export async function loadGrades() {
         id: 'asc'
       }
     });
-
-    if (res) {
-      return res;
-    } else {
-      return null;
-    }
+    return res;
   } catch (error) {
     console.log("Error in loadGrades", error);
     return null;
