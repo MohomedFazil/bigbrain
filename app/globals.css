@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-poppins: var(--font-poppins);
+
+  --color-primary: #EFEFEF;
+  --color-gold-100: #FFD700;
+  --color-gold-200: #B8860B;
+  --color-silver-100: #585d5e;
+  --color-silver-200: #d4d5d7;
+  --color-bronze-100: #b53e1c;
+  --color-bronze-200: #fcc795;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-primary);
+  font-family: var(--font-poppins);
+}
+
+@layer components {
+  .box-container {
+    @apply max-w-7xl mx-auto px-4
+  }
+
+  .card-box {
+    @apply py-8 px-6 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl border border-b-4
+  }
+
+  .gold-box {
+    @apply bg-linear-to-r from-gold-100 to-gold-200
+  }
+
+  .gif-bg {
+    background-image: url("/gold.gif");
+    background-position: center;
+    background-size: cover 1%;
+    background-repeat: no-repeat;
+  }
+
+  .bronze-box:hover img,
+  .silver-box:hover img,
+  .gold-box:hover img {
+    @apply scale-110 transition-all duration-300
+  }
+
+  .silver-box {
+    @apply bg-linear-to-r from-silver-100 to-silver-200
+  }
+
+  .bronze-box {
+    @apply bg-linear-to-r from-bronze-100 to-bronze-200
+  }
 }
