@@ -1,7 +1,6 @@
 "use client"
 
 import { loadData, loadPapers, loadStudents } from '@/action/result.action';
-import { prisma } from '@/lib/prisma';
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
@@ -38,7 +37,6 @@ const GradeDetail = ({ id }: { id: string }) => {
         .slice(0, 3); // top 3
 
       setRank(rankings);
-      console.log("Calculated rankings:", rankings);
     } catch (error) {
       console.log("Error in calculate ranks", error);
     }

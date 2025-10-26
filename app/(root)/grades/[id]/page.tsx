@@ -6,7 +6,6 @@ interface Props {
 
 const page = async ({ params }: Props) => {
   const { id } = await params;
-  console.log("Grade ID in page component:", id);
   return (
     <section>
       <GradeDetail id={id} />
