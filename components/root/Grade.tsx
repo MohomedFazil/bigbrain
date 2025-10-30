@@ -33,6 +33,8 @@ const Grade = () => {
             <span>Mathematics</span>
           </Link>
         ))}
+
+        <button className='bg-green-400 px-4 py-8 rounded-2xl'>Add Now</button>
       </div>
     </div>
   )

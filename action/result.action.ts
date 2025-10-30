@@ -80,3 +80,25 @@ export async function loadData(id: string) {
     return null;
   }
 }
+
+// export async function addDatabase() {
+//   try {
+//     const res = await prisma.mark.create({
+//       data: {
+//         studentId: 5,
+//         gradeId: 7,
+//         subjectId: 1,
+//         paperId: 2,
+//         score: 13
+//       }
+//     })
+
+//     // const res = await prisma.grade.deleteMany();
+
+//     if (res) {
+//       console.log("Added successfully", res);
+//     }
+//   } catch (error) {
+//     console.log("Error in addDatabase", error);
+//   }
+// }
